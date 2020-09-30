@@ -6,7 +6,10 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get()
-  getHello(): string {
-    return this.appService.getHello();
+  getStream(): string {
+    //TODO: add as body/params
+    const username = 'user';
+    const tweetId =  'tweet';
+    return this.appService.getStream(username, tweetId);
   }
 }
